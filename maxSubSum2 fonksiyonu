@@ -1,0 +1,42 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int maxSubSum2(array a)
+{
+    int maxSum = 0; 
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    for (i=0; i<sizeof(a); i++)
+    {
+        int thisSum = 0;
+        for (j=i; j<sizeof(a); j++)
+        { 
+            thisSum = thisSum + array[k];
+            if (thisSum>maxSum)
+            {
+                maxSum = thisSum;
+            }    
+        }
+        return maxSum;
+    } 
+    printf(&maxSum);
+}    
+
+int main(int argc, char *argv[])
+{
+    int myArray[] = {4, -3, 5, -2, -1, 2, 6, -2};
+    
+    maxSubSum2(myArray);
+
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
+
+
+//En içteki -j ile başlayan- for döngüsü i+2 olarak bulunur,
+//i ile başlayan for döngüsü (i+2)*i+1 olarak bulunur, sabit sayılar ihmal edildiğinde i^2 olarak sadeleştirilir.
+// for döngüsünden çıkıldığında da i^2+2+2+2+2 = i^2+8 olur.
+//Bu bağlamda fonksiyonumuzun karmaşıklığı = O(n^2)  olarak bulunur.
