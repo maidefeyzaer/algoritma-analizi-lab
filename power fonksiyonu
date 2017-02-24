@@ -1,0 +1,36 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int usAl (int a, int b)
+{
+    int sonuc = 1; 
+    int i = 0; 
+    for (i=0; i<b; i++){ 
+        sonuc = sonuc*a; 
+    } 
+    printf("sonuc = %d \n", sonuc);
+}
+
+int main(int argc, char *argv[])
+{
+    int a; 
+    int b; 
+    printf("taban: ");
+    scanf("%d",&a);
+    printf("us: ");
+    scanf("%d",&b);
+    
+    usAl(a,b);
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
+
+
+//2+2+5i(döngü)+1+1 =
+//6+5i olarak bulunur.
+//6 sabit sayı olduğu için ihmal ediyoruz. 5i de i'nin 0'dan b değerini alana kadar toplamı olduğu
+//için sonuç bir tam sayı olmalıdır. i'nin önündeki 5 katsayısı sabit olduğu için ihmal edebiliriz.
+//Bu bağlamda fonksiyonumuzun karmaşıklığı = O(n)  olarak bulunur.
