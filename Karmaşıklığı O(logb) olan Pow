@@ -3,17 +3,22 @@
 
 using namespace std;
 
+int sayac = 1;
+
 long pow(int x, int n)
-{
+{ 
     if (n==0) return 1;
     if (n==1) return x;
     if (n%2==0){
+       sayac++;
        return pow(x*x, n/2);
     }
     else{
+         sayac++;
          return pow(x*x, n/2)*x;
     }
 }
+
 
 int main(int argc, char *argv[])
 {
@@ -25,10 +30,12 @@ int main(int argc, char *argv[])
     scanf("%d",&b);
     
     printf("sonuc = %d \n", pow(a,b));
+    printf("adim sayisi = %d \n", sayac);
     
     system("PAUSE");
     return EXIT_SUCCESS;
 }
+
 
 //2^k=n şeklinde artmaktadır bu durumda algoritma k kadar döngüye girmektedir
 //2^k=n => k=logn olarak bulunur. Bu bağlamda algoritmanın karmaşıklığı O(logn) olarak bulunur.
