@@ -1,0 +1,33 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+void yazdir(int dizi[], int n)
+{
+     int i;
+     int l1 = (n/2)-1;
+     int l2= (n/2);
+     
+     for(i=0; i<=l1; i++ )
+     {
+               printf("%d \n", dizi[l1-i]);
+     }
+     
+     printf("\n\n\n");
+     
+     for(i=l2;i<n;i++)
+     {
+                   printf("%d \n", dizi[i]);                      
+     }
+     
+}
+
+int main(int argc, char *argv[])
+{
+    int a[8]={4, -3, 2, 1, 6, -1, -2, 4};
+    yazdir(a, 8);
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
