@@ -15,3 +15,9 @@ def max_sub_sum_array(array):
         sum_middle=find_middle(array)
 
     return find_max_triple(sum_left,sum_right,sum_middle)
+
+Diziyi her seferinde 2'ye bölmekte ve bu dizilerden yeni alt diziler oluşmakta
+Bu durumda n boyutlu dizinin step sayısı T(n) = 2*T(n/2) olurken n/2 boyutlu dizinin step sayısı T(n/2) = 2*T(n/4)+n/2,
+n/4 boyutlu dizinin step sayısı T(n/4) = 2*T(n/8)+n/4... 2 boyutlu dizinin step sayısı T(2) = T(1)+c şeklinde devam etmektedir.
+Bu durumda T(n)= kn olarak bulunur. (k algoritmadaki toplam step sayısıdır)
+2^k=n ise logn=k olarak bulunur, denklemde k yerine yazılırsa algoritmanın karmaşıklığı T(n) = nlogn dir.
