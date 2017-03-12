@@ -1,0 +1,17 @@
+def max_sub_sum_array(array):
+
+    if(len(array)<2):
+
+        return sum(array)
+
+    else:
+
+        middle=int(len(array)/2)
+
+        sum_left=max_sub_sum_array(array[0:middle-1])
+
+        sum_right=max_sub_sum_array(array[middle:])
+
+        sum_middle=find_middle(array)
+
+    return find_max_triple(sum_left,sum_right,sum_middle)
