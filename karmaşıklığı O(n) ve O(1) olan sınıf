@@ -1,0 +1,51 @@
+#include <cstdlib>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class myClass
+{
+      public:
+             vector<int> myClassInstance1[10];
+             vector<int> myClassInstance2[10];
+             int a = sizeof(myClassInstance1);
+             int n = a+5;
+             
+             void elemanEkle(int dizi[a], int n)
+             {
+                  for(i=a; i<n; i++)
+                  {
+                        dizi.push_back(i);   
+                  }
+             }
+             
+             myClass operator=(const myClass& m) 
+             {
+                 myClass myclass;
+                 
+                 for(i=0; i<n; i++)
+                 {
+                          myclass.myClassInstance2[i] = this-> myClassInstance1[i]+ m.myClassInstance1[i]
+                          return myclass;
+                 }
+             }
+}
+
+int main(int argc, char *argv[])
+{
+    myClass myclass1;
+    myClass myclass2;
+    
+    elemanEkle(myclass1, 10);
+    
+    myclass2 = myclass1;
+    
+    for (i=0; i<20; i++)
+    {
+        printf(" %d \n",myclass2[i]);
+    }
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
