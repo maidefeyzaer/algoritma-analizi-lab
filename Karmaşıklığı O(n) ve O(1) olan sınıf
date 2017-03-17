@@ -49,3 +49,8 @@ int main(int argc, char *argv[])
     system("PAUSE");
     return EXIT_SUCCESS;
 }
+
+//elemanEkle metodunda diziye k tane eleman ekliyoruz, bu durumda döngü k defa çalışmaktadır.
+//k'nın bir sabit olduğunu varsaydığımızda karmaşıklığı O(1) olarak bulunur.
+//'=' operatörü aşırı yüklendiği metotda, 1. dizinin eleman sayısı kadar döngü çalışmaktadır.
+//1. dizinin eleman sayısı n ise karmalşıklığı O(n) olarak bulunur.
