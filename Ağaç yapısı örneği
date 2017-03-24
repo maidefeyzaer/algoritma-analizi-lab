@@ -2,6 +2,7 @@
 #include <conio.h> 
 #include <stdlib.h> 
 #include <string.h>
+#include <math.h>
 
 using namespace std;
 
@@ -57,8 +58,15 @@ int main(int argc, char *argv[])
 {
 
   	struct Agac1;
+  	double sonuc;
   	
-  	ortalamaDerinlik(Agac1, 12);
+  	sonuc = ortalamaDerinlik(Agac1, 12);
+  	
+  	double complexity = log (12);
+  	
+  	printf("Ortalama Derinlik fonksiyonuyla bulduğumuz derinlik değeri: %d", &sonuc);
+  	
+  	printf("Düğüm sayısı 12 olan ağacın karmaşıklığı log(12): %d", &complexity);
        
    
 
