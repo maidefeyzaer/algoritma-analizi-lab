@@ -1,0 +1,68 @@
+#include <stdio.h> 
+#include <conio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+using namespace std;
+
+typedef struct AgacYapisi 
+            { 
+            	int bilgi; 
+            	char mesaj[200]; 
+            	struct AgacYapisi *sag,*sol; 
+            }Agac2; 
+   
+  Agac2 *kok=NULL;  
+   
+  Agac2 *ara(), *sil(), *oku();   
+  void yaz(), ekle(), listele(); 
+  int sayagacdugum();
+  
+  void ekle(agacKok,yeni) 
+  Agac2 *agacKok, *yeni; 
+    { 
+    	 if(agacKok==NULL) 
+    	       kok=yeni;     
+    	 else 
+  	    { 
+  	    	 if(yeni->bilgi <= agacKok->bilgi) 
+  	    	                { 
+  	    	                	if(agacKok->sol==NULL) 
+  	    	                	       agacKok->sol=yeni; 
+  	    	                	else 
+  								       ekle(agacKok->sol,yeni);         
+  	    	                	 
+  	    	                } 
+  	         else 
+  			    { 
+  			    	if(agacKok->sag==NULL) 
+  			    	      agacKok->sag=yeni; 
+  			    	else 
+  					     ekle(agacKok->sag,yeni);       
+  			    }	 
+  	    }       
+    } 
+     
+
+int ortalamaDerinlik(struct Agac, int dugumSayisi)
+  {
+      struct Agac{
+             dugum *kok;
+             int elemansayisi;
+      };
+      ekle(Agac,dugumSayisi);
+}
+
+int main(int argc, char *argv[])
+{
+
+  	struct Agac1;
+  	
+  	ortalamaDerinlik(Agac1, 12);
+       
+   
+
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
