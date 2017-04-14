@@ -1,0 +1,31 @@
+#include <cstdlib>
+#include <iostream>
+
+int Toplam (int a[], int b[])
+{
+    int toplam = 0;
+    int carpim=0;
+    int i=0;
+    int sayac = 3;
+    for (i=0; i<sayac; i++)
+    {
+        carpim=a[i]*b[i];
+        toplam=toplam+carpim;
+    }
+    
+    printf("%d \n", toplam);
+    
+}
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    int a[]={1,2,4};
+    int b[]={2,5,3};
+    
+    Toplam(a,b);
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
