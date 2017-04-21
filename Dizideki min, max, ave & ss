@@ -1,0 +1,57 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int Hesapla (int a[])
+{
+    int i,k,l=0;
+    int enBuyuk=a[0];
+    int enKucuk=a[0];
+    int toplam=0;
+    int lenght=6;
+    int ortalama;
+    int toplam2=0;
+    int sayi=0;
+    int deger;
+    int varyans=0;
+    
+    for(i=0;i<lenght;i++)
+    {
+         if(a[i]>enBuyuk)
+         enBuyuk=a[i];
+         
+         if(a[i]<enKucuk)
+         enKucuk=a[i];
+         
+         toplam=toplam+a[i];
+    }
+    
+    ortalama=toplam/6;
+    
+    for(k=0;k<lenght;k++)
+    {
+        deger=a[k]-ortalama;
+        sayi=deger*deger;
+        
+        toplam2=toplam2+sayi;
+    }
+    
+    varyans = toplam2/5;
+    
+    printf("en buyuk: %d \n", enBuyuk);
+    printf("en kucuk: %d \n", enKucuk);
+    printf("ortalama: %d \n", ortalama);
+    printf("varyans: %d \n", varyans);
+    
+}
+
+int main(int argc, char *argv[])
+{
+    int a[]={-1, 5, -14, 0, 8, 20};
+    
+    Hesapla(a);
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
