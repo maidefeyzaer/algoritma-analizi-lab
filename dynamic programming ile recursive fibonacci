@@ -1,0 +1,25 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int fibo(int n, int a[])
+{
+    if(n<2) return n;
+    if(a[n]!=2) return a[n];
+    else (a[n-1]+a[n-2]);
+    
+}
+
+int main(int argc, char *argv[])
+{
+    int b[]={0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987};
+    
+    fibo(7,b);
+    
+    printf("7. fibonacci sayisi: %d \n",fibo(7,b));
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
+
