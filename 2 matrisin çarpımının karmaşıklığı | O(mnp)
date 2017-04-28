@@ -1,0 +1,36 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+
+void MatrisCarpim() {  
+
+    int aMatris[3][2] = {{1, 4}, {2, 5}, {3, 6}};  
+    int bMatris[2][3] = {{7, 8, 9}, {10, 11, 12}};  
+    int Carpim[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};  
+
+    for (int row = 0; row < 3; row++) {  
+        for (int col = 0; col < 3; col++) {  
+            for (int inner = 0; inner < 2; inner++) {  
+                Carpim[row][col] += aMatris[row][inner] * bMatris[inner][col];  
+            }  
+            std::cout << product[row][col] << "  ";  
+        }  
+        std::cout << "\n";  
+    }  
+}  
+
+int main(int argc, char *argv[])
+{
+    MatrisCarpim();  
+    getchar();  
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
+
+İç içe 3 for döngüsü bulunmaktadır. İlk for döngüsü aMatris'in satır sayısı kadar dönecektir (m)
+İkinci for döngüsü bMatrisin sütun sayısı kadar dönecektir (p)
+Üçüncü for döngüsü ise aMatris'in sütun (aynı zamanda da bMatris'in satır) sayısı kadar dönecektir(n)
+Bu durumda karmaşıklık O(mnp) olarak bulunur
